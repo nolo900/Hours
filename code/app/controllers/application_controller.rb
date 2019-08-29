@@ -9,6 +9,14 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def default_url_options
+    if Rails.env.development?
+      { host: "hours.localhost"}
+    else
+      {}
+    end
+  end
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:accept_invitation).
       concat([:first_name, :last_name])
@@ -42,11 +50,18 @@ class ApplicationController < ActionController::Base
   def load_schema
     Apartment::Tenant.switch("public")
     return unless request.subdomain.present?
+    # puts 'request', request
+    # puts 'request.host', request.host
+    # puts 'request.subdomain', request.subdomain
+    # puts 'request.subdomains.first', request.subdomains.first
+    # puts 'request.subdomains', request.subdomains.class
 
     if current_account
       Apartment::Tenant.switch(request.subdomain)
     else
-      redirect_to root_url(subdomain: false)
+      # redirect_to root_url(subdomain: false)
+      puts "redirecting to root_url"
+      redirect_to root_url
     end
   end
 

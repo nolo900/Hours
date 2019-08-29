@@ -6,7 +6,7 @@ end
 ENV["RAILS_ENV"] = "test"
 
 require "dotenv"
-Dotenv.overload(".sample.env")
+Dotenv.overload(".env")
 
 require File.expand_path("../../config/environment", __FILE__)
 

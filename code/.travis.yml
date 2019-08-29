@@ -3,7 +3,7 @@ rvm:
 bundler_args: "--without debug development"
 cache: bundler
 before_script:
-- cp .sample.env .env
+- cp .env .env
 - export SECRET_KEY_BASE="$(bundle exec rake secret)"
 - cp config/database.travis.yml config/database.yml
 - psql -c 'create database hours_test' -U postgres

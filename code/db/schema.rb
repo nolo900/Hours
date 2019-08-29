@@ -53,11 +53,11 @@ ActiveRecord::Schema.define(version: 20150224115957) do
   end
 
   create_table "clients", force: :cascade do |t|
-    t.string   "name",              default: "", null: false
-    t.string   "description",       default: ""
+    t.string   "name",                        default: "", null: false
+    t.string   "description",                 default: ""
     t.string   "logo_file_name"
     t.string   "logo_content_type"
-    t.integer  "logo_file_size"
+    t.integer  "logo_file_size",    limit: 8
     t.datetime "logo_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"

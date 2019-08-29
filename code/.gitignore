@@ -1,0 +1,14 @@
+!spec/helpers/.keep
+*.DS_Store
+*.swo
+*.swp
+/.bundle
+/.env
+/.foreman
+/coverage/*
+/code/db/*.sqlite3
+/log/*
+/code/public/system
+/tags
+/tmp/*
+/code/config/database.yml

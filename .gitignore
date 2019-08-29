@@ -1,14 +1,3 @@
-!.keep
-*.DS_Store
-*.swo
-*.swp
-/.bundle
-/.env
-/.foreman
-/coverage/*
-/db/*.sqlite3
-/log/*
-/public/system
-/tags
-/tmp/*
-/config/database.yml
+.env
+docker-compose.yml
+.idea
