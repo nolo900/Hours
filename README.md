@@ -1,11 +1,18 @@
-# Hours
+# Hours - Docker Setup
 
-Make sure docker is installed
+First make sure docker is installed. 
 
-- git clone https://github.com/nolo900/traefik_docker.git
-- cd traefit_docker
-- docker-compose up
+## Setup Network
+
+Clone and run traefik (this handles subdomain issues)
+`git clone https://github.com/nolo900/traefik_docker.git`
+`cd traefit_docker`
+`docker-compose up`
+
+## Setup this project
+
+clone repo, then once in project dir run
+`docker-compose run --rm app rake db:create db:migrate`
 
 
 
-Time registration that doesn't suck
