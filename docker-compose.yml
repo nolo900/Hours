@@ -9,9 +9,10 @@ services:
       POSTGRES_USER:
       POSTGRES_PASSWORD:
     image: postgres:9.6
+    ports:
+      - 5432:5432
     volumes:
-      - ./data:/usr/local/pgsql/data
-
+      - ./postgresql/data:/var/lib/postgresql/data
   jobs:
     env_file: .env
     build: .
