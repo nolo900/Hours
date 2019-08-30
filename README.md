@@ -13,5 +13,6 @@ Clone and run traefik, its a small docker container that handles local domain na
 
 clone repo this repo, then..
 - `cd Hours`
-- `docker-compose run --rm app rake db:create db:migrate`
+- `docker-compose run --rm app rake db:create`
+- `docker-compose run --rm app rake db:migrate`
 - `docker-compose up`
