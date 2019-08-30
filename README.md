@@ -5,9 +5,9 @@ First make sure docker is installed.
 ## Setup Network
 
 Clone and run traefik (this handles subdomain issues)
-`git clone https://github.com/nolo900/traefik_docker.git`
-`cd traefit_docker`
-`docker-compose up`
+- `git clone https://github.com/nolo900/traefik_docker.git`
+- `cd traefit_docker`
+- `docker-compose up`
 
 ## Setup this project
 
